@@ -21,8 +21,13 @@ body {
   gap: 50px;
   width: 100%;
   padding: 0 20px;
+  position: relative;
 }
-
+header.container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
 main.container {
   flex-direction: column;
   justify-content: flex-start;
@@ -38,7 +43,25 @@ main.container {
 }
 .menu {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.main-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateY(100%);
+  background-color: #fff;
+  box-shadow: 0 2px 4px #0003;
+}
+.menu-visible .menu {
+  display: flex;
 }
 
 .menu > a {
