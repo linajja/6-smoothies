@@ -3,14 +3,14 @@
 @import "./components/font-awesome.min.css";
 
 :root {
-  --primary-color: ;
+  --primary-color: #ff5e61;
 }
 body {
   display: flex;
   height: 100vh;
   flex-direction: column;
   gap: 30px;
-  padding-top: 30px;
+  padding-top: 20px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -44,10 +44,17 @@ body {
   color: var(--primary-color);
   text-decoration: underline;
 }
-
+.icons {
+  display: flex;
+  gap: 20px;
+}
 .icons > a {
   color: #000;
   text-decoration: none;
+}
+.icons > a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 .gallery {
   width: 60%;
@@ -62,19 +69,19 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.3em;
-  height: 1.3em;
-  line-height: 1.3em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
   text-align: center;
   color: #fff;
   background-color: var(--primary-color);
   border-radius: 50%;
 }
-.gallery > fa.fa-angle-left {
+.gallery > .fa.fa-angle-left {
   left: 0;
   padding-right: 0.17em;
 }
-.gallery > fa.fa-angle-right {
+.gallery > .fa.fa-angle-right {
   right: 0;
   padding-left: 0.17em;
 }
