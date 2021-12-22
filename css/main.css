@@ -57,6 +57,7 @@ main.container {
   padding: 0 0.7em;
   position: relative;
   font-size: 40px;
+  width: 55%;
 }
 .gallery > img {
   width: 100%;
@@ -86,6 +87,7 @@ main.container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 45%;
 }
 .text > .category {
   color: var(--primary-color);
@@ -103,6 +105,7 @@ main.container {
 .text > .contains {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px 50px;
 }
 .text > .contains > .list {
@@ -131,6 +134,7 @@ main.container {
 }
 .text .list > .list-image {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   list-style-type: none;
 }
