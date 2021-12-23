@@ -43,11 +43,6 @@ main.container {
   max-height: 40px;
   margin-right: auto;
 }
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 .main-menu {
   display: none;
   flex-direction: column;
@@ -64,10 +59,14 @@ main.container {
   background-color: #fff;
   box-shadow: 0 6px 4px -6px #0004;
 }
-.menu-visible .menu {
+.menu-visible .main-menu {
   display: flex;
 }
-
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .menu > a {
   color: #000;
   text-decoration: none;
@@ -85,13 +84,13 @@ main.container {
   position: relative;
   font-size: 40px;
 }
-.gallery > picture{
+.gallery > picture {
   width: 100%;
 }
 .gallery > picture > img {
   width: 100%;
 }
-.gallery .fa {
+.gallery > .fa {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -125,7 +124,7 @@ main.container {
 .text > .title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 900px;
   letter-spacing: -1px;
 }
 .text > .contains {
@@ -152,7 +151,7 @@ main.container {
   line-height: 20px;
 }
 .text .list-plus > li::before {
-  content: "+";
+  content: '+';
   margin-right: 10px;
   color: var(--primary-color);
   font-size: 36px;
@@ -187,7 +186,7 @@ main.container {
   font-weight: bold;
   background-color: var(--primary-color);
   border: none;
-  border-radius: 0.5;
+  border-radius: 0.5em;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -223,13 +222,16 @@ main.container {
   .gallery {
     width: 55%;
   }
-  .txt {
+  .text {
     width: 45%;
   }
 }
 @media (min-width: 1000px) {
   .container {
     width: 900px;
+  }
+  .text > .contains {
+    flex-direction: row;
   }
 }
 @media (min-width: 1200px) {
